@@ -8,7 +8,7 @@ def index():
     with open("data.json", "r") as fileobj:
         blog_posts = json.load(fileobj)
 
-    return render_template('index.html', posts=blog_posts)
+    return render_template("index.html", posts=blog_posts)
 
 
 @app.route('/add', methods=['GET', 'POST'])
@@ -30,7 +30,7 @@ def add():
         with open("data.json", "w") as fileobj:
             json.dump(blog_posts, fileobj, indent=4)
 
-    return render_template('add.html')
+    return render_template("add.html")
 
 
 @app.route('/delete/<int:post_id>')
@@ -43,7 +43,44 @@ def delete(post_id):
     with open("data.json", "w") as fileobj:
         json.dump(new_blog_posts, fileobj, indent=4)
 
-    return redirect(url_for('index'))
+    return redirect(url_for("index"))
+
+
+def fetch_post_by_id(post_id):
+    """Searches for a post using its ID in the JSON file."""
+    with open("data.json", "r") as fileobj:
+        blog_posts = json.load(fileobj)
+
+    for post in blog_posts:
+        if post["id"] == post_id:
+            return post
+    return None
+
+
+@app.route('/update/<int:post_id>', methods=['GET', 'POST'])
+def update(post_id):
+    post = fetch_post_by_id(post_id)
+    if post is None:
+        # Post not found
+        return "Post not found", 404
+
+    if request.method == 'POST':
+        with open('data.json', 'r') as fileobj:
+            blog_posts = json.load(fileobj)
+
+        for post in blog_posts:
+            if post["id"] == post_id:
+                post["author"] = request.form.get("new_author")
+                post["title"] = request.form.get("new_title")
+                post["content"] = request.form.get("new_content")
+                break
+        with open("data.json", "w") as fileobj:
+            json.dump(blog_posts, fileobj, indent=4)
+
+        return redirect(url_for("index"))
+
+    return render_template("update.html", post=post)
+
 
 
 if __name__ == '__main__':

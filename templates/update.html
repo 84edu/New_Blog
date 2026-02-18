@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update a post</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <form action="/update/{{ post.id }}" method="post">
+        <label for="new_author">New Author:</label>
+        <input type="text" name="new_author" id="new_author" value="{{ post.author }}" required>
+        <label for="new_title">New Title:</label>
+        <input type="text" name="new_title" id="new_title" value="{{ post.title }}" required>
+        <label for="new_content">New Content:</label>
+        <textarea name="new_content" id="new_content" rows="5" required>{{ post.content }}</textarea>
+        <button type="submit" class="btn">Submit</button>
+    </form>
+</body>
+</html>

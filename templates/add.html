@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Add a new post</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <form action="/add" method="post">
@@ -12,7 +13,7 @@
         <input type="text" name="title" id="title" required>
         <label for="content">Content:</label>
         <textarea name="content" id="content" rows="5" required></textarea>
-        <button type="submit">Submit</button>
+        <button type="submit" class="btn">Submit</button>
     </form>
 </body>
 </html>
