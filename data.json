@@ -1,38 +1,29 @@
 [
     {
-        "id": 2,
-        "author": "Jane Doe",
-        "title": "Favorite",
-        "content": "some content here!"
+        "author": "Max Mustermann",
+        "title": "A new title",
+        "content": "Your content goes here!",
+        "id": 1,
+        "likes": 2
     },
     {
-        "id": 3,
         "author": "Behrooz",
-        "title": "Third Post",
-        "content": "This is another post.\r\n\r\n"
+        "title": "Another title",
+        "content": "Your content goes here!",
+        "id": 2,
+        "likes": 1
     },
     {
-        "id": 4,
-        "author": "Jack Wichester",
-        "title": "Fourth Post",
-        "content": "This is another post."
-    },
-    {
-        "id": 5,
         "author": "Dean Winchester",
-        "title": "Fifth Post",
-        "content": "This is another post."
-    },
-    {
-        "id": 6,
-        "author": "The God",
-        "title": "Sixth Post",
-        "content": "This is another post."
+        "title": "I'm not the God, but...!",
+        "content": "Don't mess with me",
+        "id": 3,
+        "likes": 1
     },
     {
         "author": "Castiel",
-        "title": "I'm the new God",
-        "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et",
-        "id": 8
+        "title": "I'm the new God!",
+        "content": "How can I help you?!!",
+        "id": 4
     }
 ]

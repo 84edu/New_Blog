@@ -29,7 +29,7 @@ def add():
 
         with open("data.json", "w") as fileobj:
             json.dump(blog_posts, fileobj, indent=4)
-
+        return redirect(url_for("index"))
     return render_template("add.html")
 
 
@@ -61,7 +61,6 @@ def fetch_post_by_id(post_id):
 def update(post_id):
     post = fetch_post_by_id(post_id)
     if post is None:
-        # Post not found
         return "Post not found", 404
 
     if request.method == 'POST':
@@ -81,6 +80,21 @@ def update(post_id):
 
     return render_template("update.html", post=post)
 
+
+@app.route('/like/<int:post_id>', methods=['POST'])
+def like(post_id):
+    with open('data.json', 'r') as fileobj:
+        blog_posts = json.load(fileobj)
+
+    for post in blog_posts:
+        if post['id'] == post_id:
+            post['likes'] = post.get('likes', 0) + 1
+            break
+
+    with open('data.json', 'w') as fileobj:
+        json.dump(blog_posts, fileobj, indent=4)
+
+    return redirect(url_for('index'))
 
 
 if __name__ == '__main__':

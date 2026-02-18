@@ -42,3 +42,18 @@ h1 {
 
 .btn-update { background-color: #4CAF50; }
 .btn-delete { background-color: #f44336; }
+
+.btn-like {
+    background: none;
+    border: 1px solid #ff4b2b;
+    color: #ff4b2b;
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-like:hover {
+    background-color: #ff4b2b;
+    color: white;
+}
