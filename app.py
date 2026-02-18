@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, url_for
+from flask import Flask, render_template, request, url_for, redirect
 import json
 
 app = Flask(__name__)
@@ -31,6 +31,19 @@ def add():
             json.dump(blog_posts, fileobj, indent=4)
 
     return render_template('add.html')
+
+
+@app.route('/delete/<int:post_id>')
+def delete(post_id):
+    with open('data.json', 'r') as fileobj:
+        blog_posts = json.load(fileobj)
+
+    new_blog_posts = [post for post in blog_posts if post['id'] != post_id]
+
+    with open("data.json", "w") as fileobj:
+        json.dump(new_blog_posts, fileobj, indent=4)
+
+    return redirect(url_for('index'))
 
 
 if __name__ == '__main__':

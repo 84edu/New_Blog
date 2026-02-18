@@ -36,12 +36,6 @@
         "content": "This is another post."
     },
     {
-        "author": "Arnold",
-        "title": "Test Title",
-        "content": "Lorem ipsum dolor sit amet, consetetur ",
-        "id": 7
-    },
-    {
         "author": "Castiel",
         "title": "I'm the new God",
         "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et",
