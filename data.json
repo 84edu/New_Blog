@@ -1,8 +1,50 @@
 [
-    {"id": 1, "author": "John Doe", "title": "First Post", "content": "This is my first post."},
-    {"id": 2, "author": "Jane Doe", "title": "Second Post", "content": "This is another post."},
-    {"id": 3, "author": "Behrooz", "title": "Third Post", "content": "This is another post."},
-    {"id": 4, "author": "Jack Wichester", "title": "Fourth Post", "content": "This is another post."},
-    {"id": 5, "author": "Dean Winchester", "title": "Fifth Post", "content": "This is another post."},
-    {"id": 6, "author": "The God", "title": "Sixth Post", "content": "This is another post."}
+    {
+        "id": 1,
+        "author": "John Doe",
+        "title": "First Post",
+        "content": "This is my first post."
+    },
+    {
+        "id": 2,
+        "author": "Jane Doe",
+        "title": "Second Post",
+        "content": "This is another post."
+    },
+    {
+        "id": 3,
+        "author": "Behrooz",
+        "title": "Third Post",
+        "content": "This is another post."
+    },
+    {
+        "id": 4,
+        "author": "Jack Wichester",
+        "title": "Fourth Post",
+        "content": "This is another post."
+    },
+    {
+        "id": 5,
+        "author": "Dean Winchester",
+        "title": "Fifth Post",
+        "content": "This is another post."
+    },
+    {
+        "id": 6,
+        "author": "The God",
+        "title": "Sixth Post",
+        "content": "This is another post."
+    },
+    {
+        "author": "Arnold",
+        "title": "Test Title",
+        "content": "Lorem ipsum dolor sit amet, consetetur ",
+        "id": 7
+    },
+    {
+        "author": "Castiel",
+        "title": "I'm the new God",
+        "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et",
+        "id": 8
+    }
 ]
