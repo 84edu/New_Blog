@@ -1,0 +1,8 @@
+[
+    {"id": 1, "author": "John Doe", "title": "First Post", "content": "This is my first post."},
+    {"id": 2, "author": "Jane Doe", "title": "Second Post", "content": "This is another post."},
+    {"id": 3, "author": "Behrooz", "title": "Third Post", "content": "This is another post."},
+    {"id": 4, "author": "Jack Wichester", "title": "Fourth Post", "content": "This is another post."},
+    {"id": 5, "author": "Dean Winchester", "title": "Fifth Post", "content": "This is another post."},
+    {"id": 6, "author": "The God", "title": "Sixth Post", "content": "This is another post."}
+]
