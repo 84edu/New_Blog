@@ -33,7 +33,7 @@ def add():
     return render_template("add.html")
 
 
-@app.route('/delete/<int:post_id>')
+@app.route('/delete/<int:post_id>', methods=['POST'])
 def delete(post_id):
     with open('data.json', 'r') as fileobj:
         blog_posts = json.load(fileobj)

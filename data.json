@@ -1,12 +1,5 @@
 [
     {
-        "author": "Max Mustermann",
-        "title": "A new title",
-        "content": "Your content goes here!",
-        "id": 1,
-        "likes": 2
-    },
-    {
         "author": "Behrooz",
         "title": "Another title",
         "content": "Your content goes here!",

@@ -32,12 +32,23 @@ h1 {
     margin-bottom: 15px;
 }
 
+.post-actions form {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
 .btn {
     padding: 8px 10px;
     text-decoration: none;
     border-radius: 4px;
     color: white;
     background-color: #4CAF50;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: inherit;
+    display: inline-block;
 }
 
 .btn-update { background-color: #4CAF50; }
