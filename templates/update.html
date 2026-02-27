@@ -6,14 +6,17 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <form action="/update/{{ post.id }}" method="post">
-        <label for="new_author">New Author:</label>
-        <input type="text" name="new_author" id="new_author" value="{{ post.author }}" required>
-        <label for="new_title">New Title:</label>
-        <input type="text" name="new_title" id="new_title" value="{{ post.title }}" required>
-        <label for="new_content">New Content:</label>
-        <textarea name="new_content" id="new_content" rows="5" required>{{ post.content }}</textarea>
-        <button type="submit" class="btn">Update</button>
-    </form>
+    <div class="post">
+        <form action="{{ url_for('update', post_id=post['id']) }}" method="POST">
+            <label for="new_author">New Author:</label>
+            <input type="text" name="new_author" id="new_author" value="{{ post.author }}" required>
+            <label for="new_title">New Title:</label>
+            <input type="text" name="new_title" id="new_title" value="{{ post.title }}" required>
+            <label for="new_content">New Content:</label>
+            <textarea name="new_content" id="new_content" rows="5" required>{{ post.content }}</textarea>
+            <button type="submit" class="btn">Update</button>
+            <a href="{{ url_for('index') }}" style="margin-left: 10px;">Cancel</a>
+        </form>
+    </div>
 </body>
 </html>
