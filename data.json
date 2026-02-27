@@ -17,6 +17,14 @@
         "author": "Castiel",
         "title": "I'm the new God!",
         "content": "How can I help you?!!",
-        "id": 4
+        "id": 4,
+        "likes": 1
+    },
+    {
+        "id": 5,
+        "author": "Jack",
+        "title": "I'm the future!",
+        "content": "I'm here to help you with the biggest problem in the world: God!",
+        "likes": 1
     }
 ]

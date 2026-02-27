@@ -14,16 +14,21 @@ def index():
 @app.route('/add', methods=['GET', 'POST'])
 def add():
     if request.method == 'POST':
+        with open("data.json", "r") as fileobj:
+            blog_posts = json.load(fileobj)
+
+        if blog_posts:
+            post_ids = [post["id"] for post in blog_posts]
+            new_id = max(post_ids) + 1
+        else:
+            new_id = 1
+
         new_post_data = {
+            "id": new_id,
             "author": request.form.get("author"),
             "title": request.form.get("title"),
             "content": request.form.get("content")
         }
-
-        with open("data.json", "r") as fileobj:
-            blog_posts = json.load(fileobj)
-
-        new_post_data["id"] = len(blog_posts) + 1
 
         blog_posts.append(new_post_data)
 

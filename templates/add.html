@@ -6,14 +6,16 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <form action="/add" method="post">
-        <label for="author">Author:</label>
-        <input type="text" name="author" id="author" value="Max Mustermann" required>
-        <label for="title">Title:</label>
-        <input type="text" name="title" id="title" value="A new title" required>
-        <label for="content">Content:</label>
-        <textarea name="content" id="content" rows="5" required>Your content goes here!</textarea>
-        <button type="submit" class="btn">Submit</button>
-    </form>
+    <div class="post">
+        <form action="/add" method="post">
+            <label for="author">Author:</label>
+            <input type="text" name="author" id="author" value="Max Mustermann" required>
+            <label for="title">Title:</label>
+            <input type="text" name="title" id="title" value="A new title" required>
+            <label for="content">Content:</label>
+            <textarea name="content" id="content" rows="5" required>Your content goes here!</textarea>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
 </body>
 </html>
